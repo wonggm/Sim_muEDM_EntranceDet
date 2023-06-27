@@ -4,6 +4,17 @@ These simulations study the entrance detector performance and evaluates beam tes
 - **`100masterWithAPD.mac`**: macro file containing instrument setup information
 - `visVRML.mac`: macro file outputting `.wrl` for event display
 - `*.stl`: AUTOCAD files for rack and holder geometries
+### Running on INPAC-cluster
+For simulations with high statistics, job submission can be done using Condor,
+```
+condor_submit 0condor
+```
+`0condor` submits job that executes `0run.sh`.\
+\
+In **`0run.sh`**, the path of musrSim build should be specified in **`line 9`**,
+```
+export PATH="$PATH:/lustre/collider/wonggm/musrSim_Twiss/build"
+```
 
 # Spring 2023
 ### Simulation of prototype telescope (veto) detector 
