@@ -1,0 +1,38 @@
+# Multiple variables defined from a list: queue [<int expr>] [<list of varnames>] from [slice] <file name> | <list of items>
+Universe   = vanilla
+Executable = 0run.sh
+Log        = logs/$(FileNum)_log
+Output     = logs/$(FileNum)_out
+Error      = logs/$(FileNum)_err
+#request_cpus = 1
+Priority   = 15
+Rank       = (OpSysName == "CentOS")
+Requirements = (Machine != "bl-hd-1.phy.sjtulocal") && (Machine != "bl-hd-2.phy.sjtulocal")
+
+Arguments = $(FileNum) $(ThicknessLabel) $(Thickness) 28
+queue FileNum,ThicknessLabel,Thickness from (
+	101,0.01,0.005
+	102,0.04,0.02
+	103,0.07,0.035
+	104,0.1,0.05
+	105,0.13,0.065
+	106,0.16,0.08
+	107,0.19,0.095
+	108,0.4,0.2
+	109,0.7,0.35
+	110,1.0,0.5
+)
+
+Arguments = $(FileNum) $(ThicknessLabel) $(Thickness) 125
+queue FileNum,ThicknessLabel,Thickness from (
+	201,0.01,0.005
+	202,0.04,0.02
+	203,0.07,0.035
+	204,0.1,0.05
+	205,0.13,0.065
+	206,0.16,0.08
+	207,0.19,0.095
+	208,0.4,0.2
+	209,0.7,0.35
+	210,1.0,0.5
+)
