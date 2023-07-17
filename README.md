@@ -22,3 +22,11 @@ To reproduce detector measruements from PSI Beam Test 2022.
 - Detector geometry based on beam test
 - Optical photons collected with four sensitive device volumes attached to the rear end of the scintillator blocks
 - Optical boundary processes are being defined between each surfaces
+
+# Location of simulation ROOT output (INPAC path)
+### For photon number distribution in SiPM (Spring 2023)
+`ana_NPhotDist.C`\
+/lustre/collider/wonggm/work/simODet/data/noTwiss_Galactic_100k.root
+### For photon number distribution in scintillator channels (17072023)
+`save_Dist.C`\
+/lustre/collider/wonggm/work/simODet/data/musr_600.root
